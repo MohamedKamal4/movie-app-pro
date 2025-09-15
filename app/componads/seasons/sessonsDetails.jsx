@@ -216,7 +216,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
         </div>
         :
         
-        <div className={`w-screen overflow-auto h-screen fixed ${openDetails ? 'bottom-0 z-[10000]' : 'bottom-[-200%] z-0'} season-datails right-0`}
+        <div className={`w-screen overflow-auto h-[610px] fixed ${openDetails ? 'bottom-0 z-[10000]' : 'bottom-[-200%] z-0'} season-datails right-0`}
           style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${data.backdrop_path})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
           <div className="w-full" style={{ backgroundColor: '#0000009e', backdropFilter: 'blur(5px)' }}>
             <div className="container pt-10 w-full m-auto relative z-[9000]">
