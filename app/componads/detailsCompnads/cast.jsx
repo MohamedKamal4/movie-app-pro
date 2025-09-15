@@ -193,7 +193,7 @@ export default function Cast({ cast }) {
                         fill
                       />
                       <div className="flex gap-3 p-5 absolute top-0 left-0 works-cover w-full h-full flex-col items-start justify-center bg-gradient-to-r from-black/70 to-transparent">
-                        <h2 className="text-6xl font-semibold">{el.title || el.name}</h2>
+                        <h2 className="text-6xl text-start font-semibold">{el.title || el.name}</h2>
                         <p className="text-xl text-start w-[300px] line-clamp-3">
                           {el.overview || "No description available."}
                         </p>

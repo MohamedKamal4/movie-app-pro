@@ -216,7 +216,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
         </div>
         :
         
-        <div className={`w-screen overflow-auto h-[610px] fixed ${openDetails ? 'bottom-0 z-[10000]' : 'bottom-[-200%] z-0'} season-datails right-0`}
+        <div className={`w-screen overflow-auto h-screen fixed ${openDetails ? 'bottom-0 z-[10000]' : 'bottom-[-200%] z-0'} season-datails right-0`}
           style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${data.backdrop_path})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
           <div className="w-full" style={{ backgroundColor: '#0000009e', backdropFilter: 'blur(5px)' }}>
             <div className="container pt-10 w-full m-auto relative z-[9000]">
@@ -254,10 +254,10 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                   <div className="w-[50%]"></div>
                 </div>
 
-                <div className="w-full flex h-[600px]">
+                <div className="w-full flex h-[400px]">
                   <div className="size-full relative slide-card">
                     <Swiper
-                      direction="vertical"
+                      // direction="vertical"
                       slidesPerView={1}
                       spaceBetween={100}
                       centeredSlides
@@ -272,7 +272,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                       {uniqueEpisodes?.map((el, idx) => (
                         <SwiperSlide className="p-5" key={`${el.id}-${idx}`}>
                           <div className="size-full flex flex-col">
-                            <div className={`w-full h-[30%] relative overflow-hidden flex items-center justify-center rounded-xl`}>
+                            <div className={`w-full h-[50%] relative overflow-hidden flex items-center justify-center rounded-xl`}>
                               <Image
                                 src={`https://image.tmdb.org/t/p/w500${el.still_path || data.poster_path}`}
                                 fill
@@ -284,7 +284,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                               </div>
                             </div>
                             {item &&
-                              <div className="w-[100%] h-[70%] pt-5 flex justify-center items-center flex-col gap-2">
+                              <div className="w-[100%] h-[50%] pt-5 flex justify-center items-center flex-col gap-2">
                                 <h3 className="w-[100%] text-xs text-amber-300">Episode {item.episode_number}</h3>
                                 <h4 className="w-[100%] text-xl font-bold">{item.name}</h4>
                                 <p className="w-[100%] text-xs">{item.overview}</p>
@@ -292,75 +292,6 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                                   <span>{item.runtime} Min</span>
                                   <span className="flex items-center gap-1">{item.vote_average}  <MdOutlineStar className="text-amber-300" /></span>
                                 </div>
-
-                                {uniqueGuestStars.length > 0 &&
-                                    <div className="w-full">
-                                        <div className="w-full flex justify-between pb-5">
-                                            <h5 className="text-amber-300 font-bold text-xs">Guest Stars</h5>
-                                            { uniqueGuestStars.length > 2 &&
-                                                <span className="flex gap-1 pe-5 text-[10px] items-center">Scroll <FaArrowRight size={10} /></span>
-                                            }
-                                        </div>
-                                        <div className="flex">
-                                            <Swiper slidesPerView={2} spaceBetween={30} className="mySwiper">
-                                            {uniqueGuestStars?.map((el, idx) => {
-                                                if (!el.profile_path) return null
-                                                return (
-                                                <SwiperSlide key={`${el.id}-${idx}`}>
-                                                    <div className="m-auto w-[25px] h-[25px] relative p-5 rounded-full overflow-hidden">
-                                                      <Image
-                                                          src={`https://image.tmdb.org/t/p/w500${el.profile_path}`}
-                                                          fill
-                                                          sizes="50px"
-                                                          alt=""
-                                                      />
-                                                    </div>
-                                                    <div className="ps-3">
-                                                      <h6 className="text-[10px] text-start font-bold">{el.character}</h6>
-                                                      <p className="text-[10px] text-start">{el.name}</p>
-                                                    </div>
-                                                </SwiperSlide>
-                                                )
-                                            })}
-                                            </Swiper>
-                                        </div>
-                                    </div>
-                                }
-
-                                {uniqueCrew.length > 0 && 
-                                    <div className="w-full">
-                                        <div className="w-full flex justify-between pb-5">
-                                            <h5 className="text-amber-300 font-bold text-xs">Crew</h5>
-                                            {uniqueCrew.length > 2 &&
-                                                <span className="flex gap-1 pe-5 text-[10px] items-center">Scroll <FaArrowRight size={10} /></span>
-                                            }
-                                        </div>
-                                        <div className="flex">
-                                            <Swiper slidesPerView={2} spaceBetween={30} className="mySwiper">
-                                            {uniqueCrew?.map((el, idx) => {
-                                                if (!el.profile_path) return null
-                                                return (
-                                                <SwiperSlide key={`${el.id}-${idx}`}>
-                                                    <div className="bg-amber-100 m-auto w-[25px] h-[25px] relative p-5 rounded-full overflow-hidden">
-                                                    <Image
-                                                        src={`https://image.tmdb.org/t/p/w500${el.profile_path}`}
-                                                        fill
-                                                        sizes="50px"
-                                                        alt=""
-                                                    />
-                                                    </div>
-                                                    <div className="ps-3">
-                                                    <p className="text-[10px] text-start font-bold">{el.name}</p>
-                                                    <h6 className="text-[10px] text-start">{el.department}</h6>
-                                                    </div>
-                                                </SwiperSlide>
-                                                )
-                                            })}
-                                            </Swiper>
-                                        </div>
-                                    </div>
-                                }
-                                
                               </div>
                             }
                           </div>

@@ -78,7 +78,7 @@ export default function HeroDetails({ data, type }) {
 
                     <div
                       {...(mounted ? { "data-aos": "fade-left", "data-aos-duration": "1000" } : {})}
-                      className="w-[70%] z-10 absolute top-0 right-0 h-screen img"
+                      className={`${screenWidth > 430 ? 'w-[70%]' : 'w-[100%]'} z-10 absolute top-0 right-0 h-screen img`}
                     >
                       <img
                         src={`https://image.tmdb.org/t/p/w1280${data.backdrop_path || data.poster_path}`}
