@@ -1,0 +1,307 @@
+@import "tailwindcss";
+@import "flowbite";
+
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden !important;
+}
+.scale-when-hover {
+  transition: transform 0.3s ease;
+}
+
+.season-datails {
+  transition: all 1s;
+}
+
+.log-form input::placeholder {
+  color: black !important;
+  font-size: 10px !important;
+}
+
+.log-form input {
+  border: none;
+  outline: none;
+}
+
+.log-form input:focus {
+  outline: none;
+}
+
+.scale-when-hover:hover {
+  transform: scale(1.05);
+}
+
+.card .card-details {
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.544);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.card:hover .card-details {
+  opacity: 1;
+}
+
+.intro {
+  transition: 1s;
+}
+
+.ripple {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 50px !important;
+  height: 50px !important;
+  border: 2px solid #fbbf24;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  animation: ripple 2s infinite;
+  z-index: 1;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.8);
+    opacity: 0;
+  }
+}
+
+.intro-details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.538);
+  z-index: 3105;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 13px;
+}
+
+/* globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/*hero sections*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #fbbf24; /* amber-400 */
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.custom-swiper .swiper-button-next:hover,
+.custom-swiper .swiper-button-prev:hover {
+  color: #d97706; /* amber-600 */
+  transform: scale(1.2);
+}
+
+.works .swiper-wrapper .swiper-slide {
+  display: flex;
+}
+
+.worksTwo .swiper-wrapper .swiper-slide {
+  display: flex;
+  align-items: end;
+}
+
+section .pop {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://i.pinimg.com/1200x/69/59/30/695930fbc1df62656ac8ad2e9128fd82.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dis-head {
+  z-index: 100;
+}
+.dis-head::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(to right, black, transparent);
+  z-index: 200;
+}
+
+
+
+
+.swiper-vertical .swiper-wrapper .swiper-slide {
+  display: flex !important;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-pagination-bullet {
+  background-color: black !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: oklch(0.879 0.169 91.605) !important;
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: end !important;
+  padding: 0 50px !important;
+}
+
+.swiper-v {
+  background: red;
+  border: 2px solid aqua;
+}
+
+.mySwiper .item {
+  display: flex;
+}
+
+.details-detailsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding: 100px 30px;
+  padding-right: 0 !important;
+  color: white;
+  position: relative;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding-right: 0 !important;
+  color: white;
+  position: relative;
+}
+
+.img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0%;
+  width: 100%;
+  background: linear-gradient(to right, black, transparent);
+}
+
+.mySwiper .item .details p {
+  text-align: left;
+}
+
+.mySwiper .item div .cover,
+.works-cover {
+  background: linear-gradient(to right, black, transparent);
+}
+
+.head {
+  position: absolute;
+}
+.head::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  z-index: 999;
+  background: linear-gradient(to top, black, transparent);
+}
+
+.mainHead::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to top, black, transparent);
+}
+/*end hero sections*/
+/*loading*/
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: oklch(0.879 0.169 91.605);
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+/*end loading*/
+/*Responsiv*/
+
+@media (max-width: 885px){
+  .Official-Trailer {
+    font-size: 90px !important;
+  }
+}

@@ -1,0 +1,43 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+nav div .list .links li .link {
+  transition: all 0.3s;
+}
+
+nav div .list .links li .link {
+  border-bottom: 2px solid transparent;
+}
+
+nav div .list .links li .link:hover {
+  border-bottom: 2px solid white;
+}
+
+nav div .list .links li .active {
+  border-bottom: 2px solid white;
+}
+
+.search {
+  width: 0;
+  height: 0;
+  transition: all 1s;
+  border-bottom-left-radius: 3000px;
+}
+
+.active-search {
+  width: 60vw;
+  height: 100vh;
+}
+.active-search-two {
+  width: 90%;
+  height: 90%;
+  border-bottom-left-radius: inherit;
+}
+
+.search .input {
+  border-radius: 10px;
+}
