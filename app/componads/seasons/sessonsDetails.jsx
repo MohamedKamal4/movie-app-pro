@@ -43,7 +43,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
 
   return (
     <>
-      {screenWidth > 430 ? 
+      {screenWidth > 430 &&
         
         <div className={`w-screen overflow-auto h-screen fixed ${openDetails ? 'bottom-0' : 'bottom-[-100%]'} season-datails right-0 z-[10000]`}
           style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${data.backdrop_path})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
@@ -84,7 +84,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                   <div className="w-[50%]"></div>
                 </div>
 
-                <div className="w-full flex mt-10 h-screen">
+                <div className="w-full h-screen flex mt-10">
                   <div className="w-[30%] h-[100%] mb-5 relative slide-card">
                     <Swiper
                       direction="vertical"
@@ -214,8 +214,9 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
             </div>
           </div>
         </div>
-        :
-        
+      }
+
+      {screenWidth < 430 &&
         <div className={`w-screen overflow-auto h-screen fixed ${openDetails ? 'bottom-0 z-[10000]' : 'bottom-[-200%] z-0'} season-datails right-0`}
           style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w1280${data.backdrop_path})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
           <div className="w-full" style={{ backgroundColor: '#0000009e', backdropFilter: 'blur(5px)' }}>
@@ -257,7 +258,6 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                 <div className="w-full flex h-[400px]">
                   <div className="size-full relative slide-card">
                     <Swiper
-                      // direction="vertical"
                       slidesPerView={1}
                       spaceBetween={100}
                       centeredSlides
