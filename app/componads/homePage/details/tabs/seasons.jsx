@@ -64,7 +64,7 @@ export default function SeasonsDetails({item , type}){
                     {seasons ?
                     <div className="flex flex-wrap w-full justify-center">
                         {seasons.map((sea, idx) => (
-                        <div key={`${sea.id}-${idx}`} className={` ${screenWidth > 885 ? 'w-[25%] h-[450px]' : screenWidth > 430 ? 'w-[33.33%] h-[450px]' : 'w-[70%] h-[300px]'} p-5`}>
+                        <div key={`${sea.id}-${idx}`} className={` ${screenWidth > 885 ? 'w-[25%] h-[450px]' : screenWidth > 430 ? 'w-[33.33%] h-[450px]' : 'w-[70%] h-[350px]'} p-5`}>
                             <div onClick={() => { GetData(sea); setOPenDetails(true) }}
                             className="size-full relative rounded-2xl overflow-hidden cursor-pointer hover:scale-105 transition-all">
                             <Image

@@ -90,7 +90,7 @@ export default function DiscovrSection({ movies , genre , series }) {
       <div 
       className='mainHead w-screen h-screen relative' >
         <div className='size-full mainHead cover absolute top-0 left-0 z-20'></div>
-        <div className="w-[70%] z-10 absolute top-0 right-0 h-screen img">
+        <div className={`${screenWidth > 430 ? 'w-[70%]' : 'w-[100%]'} z-10 absolute top-0 right-0 h-screen img`}>
           {mounted && (
             <Image
             key={activeIndex}

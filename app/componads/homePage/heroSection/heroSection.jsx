@@ -183,7 +183,7 @@ export default function Hero({ data, genre }) {
         <div
           key={item.id}
           data-aos="fade-left"
-          className="w-[70%] z-10 absolute top-0 right-0 h-screen img"
+          className={`${screenWidth > 430 ? 'w-[70%]' : 'w-[100%]'} z-10 absolute top-0 right-0 h-screen img`}
         >
           <Image
             className="absolute top-0 left-0 w-full h-full object-cover"
@@ -198,7 +198,7 @@ export default function Hero({ data, genre }) {
         <div className="container overflow-hidden flex justify-between items-end size-full relative m-auto z-50">
           <div className="size-full relative flex items-end">
             <div className={`w-[100%] ${screenWidth > 430 ? 'h-full' : 'h-[80%]' } flex`}>
-                <div key={title} data-aos="fade-right" className="w-[35%] h-[100%] mb-5 relative slide-card">
+                <div key={title} data-aos="fade-right" className={`${screenWidth > 430 ? 'w-[35%]' : 'w-[40%]'} h-[100%] mb-5 relative slide-card`}>
                     <Swiper
                         direction="vertical"
                         slidesPerView={3}
@@ -215,8 +215,8 @@ export default function Hero({ data, genre }) {
                         {slides}
                     </Swiper>
                 </div>
-                <div className='w-[65%] flex flex-col justify-center items-start h-full'>
-                    <div data-aos='fade-right' key={item.id} className='w-full ps-10 ms-10 border-s-2 border-amber-300'>
+                <div className={`${screenWidth > 430 ? 'w-[65%]' : 'w-[60%]'} flex flex-col justify-center items-start h-full`}>
+                    <div data-aos='fade-right' key={item.id} className='w-full ps-5 ms-5 border-s-2 border-amber-300'>
                       <div className='flex items-center '>
                         <span className={`flex items-center pe-5 justify-start gap-1 ${screenWidth > 430 ? 'text-xs' : 'text-[8px]'}`}><FaStar className='text-amber-300' /> {item.vote_average}</span>
                       </div>

@@ -54,16 +54,16 @@ export default async function Discover(){
 
     const MoviesBtns = [
         { name: "Now Playing", value: "dataOne" },
-        { name: "Top Rated", value: "dataTwo" },
+        { name: "Top", value: "dataTwo" },
         { name: "Popular", value: "dataThree" },
         { name: "Upcoming", value: "dataFour" },
     ];
 
     const SeriesBtns = [
-        { name: "On TheAir", value: "dataOne" },
+        { name: "On The Air", value: "dataOne" },
         { name: "Airing Today", value: "dataTwo" },
         { name: "Popular", value: "dataThree" },
-        { name: "TopRated", value: "dataFour" },
+        { name: "Top", value: "dataFour" },
     ];
 
     console.log('nowPlaying' , nowPlaying)

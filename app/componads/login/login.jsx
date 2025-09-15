@@ -103,7 +103,7 @@ export default function LogIn({ openLOgForem, setOpenLogForm , setLogValid }) {
 
 
   return (
-    <div className={`fixed ${openLOgForem ? 'bottom-0' : 'bottom-[-100%]'} transition-all z-[8000] left-0 h-screen w-screen`}
+    <div className={`fixed ${openLOgForem ? 'bottom-0 z-[8000]' : 'bottom-[-200%] z-0'} transition-all left-0 h-screen w-screen`}
       style={{ backgroundColor: 'rgba(0,0,0,0.5)', backdropFilter: 'blur(5px)', WebkitBackdropFilter: 'blur(5px)' }}>
       <div className="size-full relative flex justify-center items-center container m-auto">
         <div className=" absolute top-[50px] right-0">

@@ -89,8 +89,7 @@ export default function MainScreen({
 
   return (
     <div
-      className={`fixed flex justify-center items-center intro ${open ? 'bottom-0' : 'bottom-[-100%]'} transition-all left-0 bg-black h-screen w-screen`}
-      style={{ zIndex: 3000 }}
+      className={`fixed flex justify-center items-center intro ${open ? 'bottom-0 z-[3000]' : 'bottom-[-200%] z-0'} transition-all left-0 bg-black h-screen w-screen`}
     >
       <h2>{text}</h2>
       <div
@@ -156,7 +155,7 @@ export default function MainScreen({
               handleOpenDetails();
               setPlay(false);
             }}
-            className={`${screenWidth > 430 ? 'text-sm' : 'text-[8px]'} flex justify-end items-center w-[20%] opacity-70 hover:opacity-100 transition-all cursor-pointer`}
+            className={`${screenWidth > 430 ? 'text-sm' : 'text-[8px]'} flex justify-center items-center w-[20%] opacity-70 hover:opacity-100 transition-all cursor-pointer`}
           >
             Back To Home
           </button>
