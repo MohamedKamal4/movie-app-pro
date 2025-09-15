@@ -254,7 +254,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                   <div className="w-[50%]"></div>
                 </div>
 
-                <div className="w-full flex h-screen">
+                <div className="w-full flex h-[600px]">
                   <div className="size-full relative slide-card">
                     <Swiper
                       direction="vertical"
@@ -371,7 +371,7 @@ export default function SessonsDetails({ data , openDetails , seasonDetails , se
                 </div>
               </div>
 
-              <div className=" absolute top-[20px] right-[0px]">
+              <div className=" absolute top-[20px] right-[20px] ">
                 <button onClick={() => { setOPenDetails(false) }}
                   className="text-xs cursor-pointer flex gap-1 items-center">Back <FaArrowRight size={10} /></button>
               </div>
