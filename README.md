@@ -4,7 +4,8 @@ Movie App Pro is a fully responsive, **Next.js**-powered web application designe
 
 This project is built to be **fast, dynamic, and user-friendly**, offering detailed insights about movies, TV shows, cast members, and more.  
 
----
+- Purpose :
+This project aims to be a comprehensive guide to movies and TV shows, helping users explore and discover content in an interactive, visually appealing, and fast-loading way — perfect for learning SSR, state management, and API integration in Next.js.
 
 ## 🚀 Features  
 
