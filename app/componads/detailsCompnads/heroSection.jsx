@@ -95,7 +95,7 @@ export default function HeroDetails({ data, type }) {
                         <h1 className={`font-bold ${screenWidth > 430 ? 'text-9xl text-start' : 'text-4xl w-[90%] flex flex-wrap justify-center'}`}>
                           {data.title || data.original_name || data.original_title}
                         </h1>
-                        <div className="flex flex-wrap gap-2 text-xs">
+                        <div className="flex justify-center flex-wrap gap-2 text-xs">
                           <span>{type}</span> •
                           <span>{data.first_air_date || data.release_date}</span> •
                           <span>{data.original_language}</span>
