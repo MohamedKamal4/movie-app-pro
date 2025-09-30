@@ -1,7 +1,6 @@
 import { Michroma } from "next/font/google";
 import "./globals.css";
 import Navbar from "./componads/nav/navbar";
-import Footer from "./componads/footer/footer";
 import Providers from "./providers";
 
 const michroma = Michroma({
@@ -21,7 +20,6 @@ export default function RootLayout({ children }) {
       <body className="antialiased">
         <Navbar fontClass={michroma.className}/>
         <Providers>{children}</Providers>
-        <Footer />
       </body>
     </html>
   );

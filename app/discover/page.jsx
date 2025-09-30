@@ -7,7 +7,7 @@ const Recommendations = dynamic(() => import('./discoverComponads/reco/recommend
 const Pop = dynamic(() => import('./discoverComponads/popularPeaple/pop') , {Suspense : true})
 import dynamic from 'next/dynamic';
 import Loading from '../componads/loadingComponads';
-
+import Footer from '../componads/footer/footer'
 
 const API_OPTIONS = {
   method: 'GET',
@@ -108,6 +108,7 @@ export default async function Discover(){
             <Suspense fallback={<Loading />}>
                 <Pop />
             </Suspense>
+            <Footer />
         </>
     )
 }

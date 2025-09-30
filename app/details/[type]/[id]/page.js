@@ -10,7 +10,7 @@ const CardData = dynamic(() => import("../../../componads/card/cardData") , {Sus
 const VideoPlayer = dynamic(() => import("../../../componads/detailsCompnads/videos/video") , {Suspense : true}) 
 const Reviews = dynamic(() => import("../../../componads/detailsCompnads/reviews") , {Suspense : true}) 
 const Sessons = dynamic(() => import('./seasons'))
-
+import Footer from '../../../componads/footer/footer'
 export default async function Details({ params }) {
   const { id, type } = await params;
   
@@ -122,6 +122,7 @@ const dynamicOptions = {
       <Suspense fallback={<Loading />}>
         <Reviews reviews={reviews.results} />
       </Suspense>
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Content from './content'
+import Footer from '../componads/footer/footer'
 export default async function Collections(){
     
     const staticOptions = {
@@ -61,10 +62,13 @@ export default async function Collections(){
     const seriesRecommendations = seriesRecommendationsNested.flat();
 
     return (
-        <Content
-            movieReco={movieRecommendations}
-            seriesReco={seriesRecommendations}
-        />
+        <>
+            <Content
+                movieReco={movieRecommendations}
+                seriesReco={seriesRecommendations}
+            />
+            <Footer />
+        </>
     );
     } catch (err) {
     console.error("Error fetching recommendations:", err);
